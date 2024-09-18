@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- LinearLayout to hold the content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <!-- AppBarLayout with Toolbar -->
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <!-- Toolbar for navigation with back icon -->
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/updateNoteToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/colorPrimary"
+                        app:navigationIcon="@drawable/icon_back" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <!-- EditText for Title input -->
+                <EditText
+                    android:id="@+id/newNoteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Input title"
+                    android:padding="16dp"
+                    android:textColor="#4A4A4A"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <!-- TextView for Date, Time, and Word Count -->
+
+                <!-- EditText for writing Note content -->
+                <EditText
+                    android:id="@+id/newNoteContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write your Note."
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="12dp"/>
+
+            </LinearLayout>
+
+            <!-- Floating Action Button (FAB) for saving the note -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingButtonToSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Save the New Note"
+                android:src="@drawable/icon_done"
+                android:tint="@color/white"
+                app:backgroundTint="#F6DA86"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
